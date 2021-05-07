@@ -1,0 +1,10 @@
+.footer {
+	background-color: $Very-dark-black-blue-footer-background;
+	color: white;
+
+	.footer-menu-1 li a,
+	.footer-menu-2 li a,
+	.footer-menu-3 li a {
+		color: $Grayish-blue-footer-text;
+	}
+}

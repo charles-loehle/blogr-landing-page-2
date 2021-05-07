@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Overpass', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: $font-med;
+	font-weight: 300;
+	// color: $grayishBlue;
+	line-height: 1.3;
+	height: 100vh;
+}
+
+img {
+	width: 100%;
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+// Spacing
+.container {
+	margin: 0 auto;
+	max-width: 327px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+
+// flexbox
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// Buttons
+button,
+.button {
+	padding: 0.875rem 1.875rem;
+	// background: linear-gradient(to right, $limeGreen, $brightCyan);
+	border-radius: 50px;
+	border: 0;
+	cursor: pointer;
+	color: white;
+	font-weight: 400;
+}
+
+// Visibility
+.hide-for-mobile {
+	// 1023px and below
+	@include breakpoint-down(medium) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	// 1400px and above
+	@include breakpoint-up(large) {
+		display: none;
+	}
+}
