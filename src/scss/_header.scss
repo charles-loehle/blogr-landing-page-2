@@ -114,12 +114,57 @@
 		list-style: none;
 	}
 
+	.dropdown-menu.show {
+		/* in large screens, take it out of the flow of the page so it overlaps content below it and doesn't affect elements around it */
+		position: absolute;
+		display: block;
+		z-index: 1;
+		background-color: white;
+
+		a {
+			color: $Very-dark-blue-headings;
+		}
+	}
+
+	// .dropdown-toggle::after {
+	// 	display: inline-block;
+	// 	content: '';
+	// 	margin-left: 0.255em;
+	// 	vertical-align: 0.255em;
+	// 	border-top: 0.3em solid;
+	// 	border-bottom: 0;
+	// 	border-right: 0.3em solid transparent;
+	// 	border-left: 0.3em solid transparent;
+	// }
+
+	svg.rotate {
+		transform: rotate(180deg);
+	}
+
+	.dropdown-toggle {
+		svg {
+			// keep the click event on the anchor element
+			// https://css-tricks.com/links-inline-svg-staying-target-events/
+			pointer-events: none;
+			transition: transform 0.1s ease-in-out;
+		}
+	}
+
 	.dropdown-menu {
 		display: none;
 		position: absolute;
 
 		li {
 			list-style: none;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.dropdown-menu.show {
+			/* for drawer view restore default position so it does'nt overlap, it pushes elements below it down */
+			position: static;
+			padding: 0;
+			background-color: rgb(241, 241, 241);
 		}
 	}
 }

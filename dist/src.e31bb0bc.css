@@ -227,12 +227,37 @@ button,
 .header .menu-item {
   list-style: none;
 }
+.header .dropdown-menu.show {
+  /* in large screens, take it out of the flow of the page so it overlaps content below it and doesn't affect elements around it */
+  position: absolute;
+  display: block;
+  z-index: 1;
+  background-color: white;
+}
+.header .dropdown-menu.show a {
+  color: #1f3f5b;
+}
+.header svg.rotate {
+  transform: rotate(180deg);
+}
+.header .dropdown-toggle svg {
+  pointer-events: none;
+  transition: transform 0.1s ease-in-out;
+}
 .header .dropdown-menu {
   display: none;
   position: absolute;
 }
 .header .dropdown-menu li {
   list-style: none;
+}
+@media (max-width: 1024px) {
+  .header .dropdown-menu.show {
+    /* for drawer view restore default position so it does'nt overlap, it pushes elements below it down */
+    position: static;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
 }
 
 .banner {

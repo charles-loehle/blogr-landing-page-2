@@ -123,6 +123,8 @@ var body = document.querySelector('body');
 var header = document.querySelector('.header');
 var overlay = document.querySelector('.overlay');
 var fadeElems = document.querySelectorAll('.has-fade');
+var dropdownMenu = document.querySelector('.dropdown-menu');
+var dropdownToggle = document.querySelectorAll('.dropdown-toggle');
 btnHamburger.addEventListener('click', function () {
   if (header.classList.contains('open')) {
     // Close Hamburger Menu
@@ -141,6 +143,13 @@ btnHamburger.addEventListener('click', function () {
       element.classList.add('fade-in');
     });
   }
+}); // loop through all dropdown-toggle elements, rotate svg and open/close dropdown menu
+
+dropdownToggle.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    item.firstElementChild.classList.toggle('rotate');
+    e.target.nextElementSibling.classList.toggle('show');
+  });
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -170,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50361" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50749" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
