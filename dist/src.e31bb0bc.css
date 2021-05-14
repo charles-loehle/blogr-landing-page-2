@@ -114,15 +114,53 @@ a:visited {
 .flex-ai-c {
   align-items: center;
 }
+.flex-dir-col {
+  flex-direction: column;
+}
+.flex-dir-row {
+  flex-direction: row;
+}
 
 button,
-.button {
-  padding: 0.875rem 1.875rem;
+.btn {
+  padding: 0.775rem 1rem;
   border-radius: 50px;
   border: 0;
   cursor: pointer;
   color: white;
-  font-weight: 400;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #ff525d;
+  color: white;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #fc7e88;
+}
+
+.btn-outline-secondary {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-outline-secondary:hover {
+  color: #ff525d;
+  background-color: white;
+  border-color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #ff525d;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #ff7a85;
 }
 
 @media (max-width: 63.9375em) {
@@ -141,8 +179,15 @@ button,
   background: url("/bg-pattern-intro.48d6cfdf.svg"), linear-gradient(#ff3d54, #ff8f70);
   background-position: center;
   background-repeat: no-repeat;
+  height: 600px;
+  border-bottom-left-radius: 81px;
 }
 
+@media (min-width: 1024px) {
+  .intro-bg {
+    height: 800px;
+  }
+}
 .active {
   display: block;
 }
@@ -150,6 +195,7 @@ button,
 .header {
   position: relative;
   z-index: 1;
+  margin-bottom: 68px;
 }
 .header.open .header__toggle > span:first-child {
   transform: rotate(45deg);
@@ -163,12 +209,11 @@ button,
 .header nav {
   position: relative;
   color: #fff;
-  padding-top: 1.0625rem;
+  padding-top: 1.3rem;
   padding-bottom: 1.0625rem;
 }
-.header__logo img {
-  width: 8.8125rem;
-  height: 1.375rem;
+.header__logo h1 {
+  font-size: 2.5rem;
 }
 .header__toggle > span {
   display: block;
@@ -195,21 +240,36 @@ button,
 .header__menu .menu {
   padding: 0;
 }
-.header__menu a {
+.header__menu a:not(.btn) {
   display: block;
   padding: 0.625rem;
   color: #1f3f5b;
   text-align: center;
 }
-.header__links a {
+.header__menu .header__cta--login {
+  font-weight: 700;
+}
+.header__menu .header__cta--signup {
+  font-weight: 700;
+  padding: 12px 38px;
+  margin-top: 10px;
+}
+.header__links .header__cta--login {
+  font-size: 1.2rem;
+}
+.header__links .header__cta--signup {
+  font-size: 1.2rem;
+}
+.header__links a:not(.btn) {
   position: relative;
   color: #fff;
   transition: color 300ms ease-in-out;
+  font-size: 1rem;
 }
-.header__links a:not(:last-child) {
+.header__links a:not(.btn):not(:last-child) {
   margin-right: 32px;
 }
-.header__links a::before {
+.header__links a:not(.btn)::before {
   content: "";
   display: block;
   position: absolute;
@@ -232,10 +292,11 @@ button,
   display: block;
   z-index: 1;
   background-color: white;
-  width: 170px;
-  height: 149px;
-  padding: 0;
-  margin-top: 23px;
+  width: 165px;
+  padding-left: 0;
+  padding-top: 22px;
+  padding-bottom: 29px;
+  margin-top: 19px;
   border-radius: 5px;
 }
 .header .dropdown-menu.show a {
@@ -255,7 +316,7 @@ button,
 .header .dropdown-menu li {
   list-style: none;
   padding-left: 25px;
-  padding-top: 14px;
+  padding-top: 9px;
 }
 .header .dropdown-menu li a {
   font-size: 1rem;
@@ -265,8 +326,14 @@ button,
   font-weight: 700;
 }
 @media (max-width: 1024px) {
-  .header .header__menu hr {
+  .header__menu hr {
     border-top: 1px #f0f0f0 solid;
+  }
+  .header__cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .header .dropdown-menu.show {
     /* for drawer view restore default position so it does'nt overlap, it pushes elements below it down */
@@ -288,10 +355,46 @@ button,
 
 .banner {
   color: white;
+  text-align: center;
 }
-.banner .cta-btn-1,
-.banner .cta-btn-2 {
-  color: white;
+.banner__headline {
+  font-size: 3.8rem;
+  margin: 0;
+}
+.banner__subheading {
+  margin-top: 16px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .banner__headline {
+    font-size: 2.1rem;
+  }
+  .banner__subheading {
+    font-size: 1.2rem;
+  }
+  .banner__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .banner__buttons .banner__cta--start {
+    margin-right: 0;
+  }
+  .banner__buttons .banner__cta--learn {
+    margin-left: 0;
+  }
+}
+.banner__cta--start {
+  margin-right: 10px;
+}
+.banner__cta--learn {
+  margin-left: 10px;
+}
+
+.section-1 {
+  text-align: center;
 }
 
 .section-2 {

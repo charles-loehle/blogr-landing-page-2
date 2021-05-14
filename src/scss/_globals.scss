@@ -85,18 +85,58 @@ a:visited {
 	&-ai-c {
 		align-items: center;
 	}
+
+	&-dir-col {
+		flex-direction: column;
+	}
+
+	&-dir-row {
+		flex-direction: row;
+	}
 }
 
 // Buttons
 button,
-.button {
-	padding: 0.875rem 1.875rem;
-	// background: linear-gradient(to right, $limeGreen, $brightCyan);
+.btn {
+	padding: 0.775rem 1rem;
 	border-radius: 50px;
 	border: 0;
 	cursor: pointer;
 	color: white;
-	font-weight: 400;
+	font-weight: 700;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+}
+
+.btn-primary {
+	background-color: $Light-red-CTAtext;
+	color: white;
+}
+
+.btn-primary:hover {
+	color: #fff;
+	background-color: hsl(355, 95%, 74%);
+}
+
+.btn-outline-secondary {
+	color: white;
+	border: 1px solid white;
+}
+
+.btn-outline-secondary:hover {
+	color: $Light-red-CTAtext;
+	background-color: white;
+	border-color: white;
+}
+
+.btn-secondary {
+	background-color: white;
+	color: $Light-red-CTAtext;
+}
+
+.btn-secondary:hover {
+	color: #fff;
+	background-color: $Very-light-red-CTAhoverbackground;
 }
 
 // Visibility

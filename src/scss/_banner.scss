@@ -1,8 +1,53 @@
 .banner {
 	color: white;
+	text-align: center;
 
-	.cta-btn-1,
-	.cta-btn-2 {
-		color: $White-text;
+	&__headline {
+		font-size: 3.8rem;
+		margin: 0;
+	}
+
+	&__subheading {
+		margin-top: 16px;
+		margin-bottom: 50px;
+	}
+
+	// styles below 1024px
+	@media (max-width: 1024px) {
+		&__headline {
+			font-size: 2.1rem;
+		}
+
+		&__subheading {
+			font-size: 1.2rem;
+		}
+
+		&__buttons {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			align-items: center;
+
+			.banner__cta {
+				&--start {
+					margin-right: 0;
+				}
+
+				&--learn {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	&__cta {
+		&--start {
+			margin-right: 10px;
+		}
+
+		&--learn {
+			margin-left: 10px;
+		}
 	}
 }

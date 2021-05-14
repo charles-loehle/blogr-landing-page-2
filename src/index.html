@@ -23,7 +23,7 @@
 						<span></span>
 					</a>
 
-					<div class="header__links flex hide-for-mobile">
+					<div class="header__links flex hide-for-mobile flex-ai-c">
 						<ul class="menu flex">
 							<li class="menu-item dropdown">
 								<a href="#" class="dropdown-toggle"
@@ -85,8 +85,10 @@
 								</ul>
 							</li>
 						</ul>
-						<a href="#" class="button header__cta login">Login</a>
-						<a href="#" class="button header__cta signup">Sign Up</a>
+						<a href="#" class="btn header__cta--login">Login</a>
+						<a href="#" class="btn btn-secondary header__cta--signup"
+							>Sign Up</a
+						>
 					</div>
 
 					<div class="header__menu has-fade">
@@ -150,25 +152,33 @@
 							</li>
 						</ul>
 						<hr />
-						<a href="#" class="button header__cta login">Login</a>
-						<a href="#" class="button header__cta signup">Sign Up</a>
+						<div class="header__cta-buttons">
+							<a href="#" class="header__cta--login">Login</a>
+							<a href="#" class="btn btn-primary header__cta--signup"
+								>Sign Up</a
+							>
+						</div>
 					</div>
 				</nav>
 			</header>
-			<section class="banner">
-				<div class="banner-text">
-					<h1 class="banner-headline">A modern publishing platform</h1>
-					<p class="banner-subheading">
+			<section class="banner container flex flex-ai-c flex-dir-col">
+				<div class="banner__text">
+					<h1 class="banner__headline">A modern publishing platform</h1>
+					<p class="banner__subheading">
 						Grow your audience and build your online brand
 					</p>
 				</div>
-				<div class="cta-buttons">
-					<a href="#" class="btn cta-btn-1">Start for Free</a>
-					<a href="#" class="btn cta-btn-2">Learn More</a>
+				<div class="banner__buttons">
+					<a href="#" class="btn btn-secondary banner__cta--start"
+						>Start for Free</a
+					>
+					<a href="#" class="btn btn-outline-secondary banner__cta--learn"
+						>Learn More</a
+					>
 				</div>
 			</section>
 		</div>
-		<section class="section-1">
+		<section class="section-1 container">
 			<h2 class="section-heading">Designed for the future</h2>
 			<div class="section-1__editor">
 				<img src="../images/illustration-editor-mobile.svg" alt="" />

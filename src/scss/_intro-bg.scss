@@ -3,4 +3,12 @@
 		linear-gradient($Light-red, $Very-light-red);
 	background-position: center;
 	background-repeat: no-repeat;
+	height: 600px;
+	border-bottom-left-radius: 81px;
+}
+
+@media (min-width: 1024px) {
+	.intro-bg {
+		height: 800px;
+	}
 }
