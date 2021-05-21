@@ -5,10 +5,13 @@
 	background-repeat: no-repeat;
 	height: 600px;
 	border-bottom-left-radius: 81px;
+	margin-bottom: 105px;
 }
 
+// above 1024px
 @media (min-width: 1024px) {
 	.intro-bg {
 		height: 800px;
+		margin-bottom: 0;
 	}
 }

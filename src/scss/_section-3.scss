@@ -1,0 +1,58 @@
+.section-3 {
+	text-align: center;
+	margin-top: 69px;
+	margin-bottom: 96px;
+
+	@media (min-width: 1200px) {
+		text-align: inherit;
+		background-image: url('../../images/illustration-laptop-desktop.svg');
+		background-position: -42% 6px;
+		background-repeat: no-repeat;
+		background-size: 792px;
+
+		margin-top: 78px;
+		height: 670px;
+
+		.container {
+			text-align: left;
+			display: grid;
+			grid-template-columns: 1fr 588px;
+			grid-template-rows: 358px 131px;
+
+			.section-3__laptop {
+				display: none;
+			}
+
+			.section-3__info-1 {
+				grid-column: 2;
+				grid-row: 1;
+				align-self: end;
+				height: 190px;
+			}
+
+			.section-3__info-2 {
+				grid-column: 2;
+				grid-row: 2;
+				align-self: end;
+				height: 120px;
+			}
+
+			h2 {
+				grid-column: 2/2;
+				margin-bottom: 0;
+			}
+
+			h3 {
+				margin-bottom: 30px;
+			}
+			p {
+				grid-column: 2/2;
+				margin-top: 9px;
+			}
+		}
+
+		&__info {
+			padding-top: 75px;
+		}
+	}
+}

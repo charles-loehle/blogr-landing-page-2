@@ -1,10 +1,54 @@
 .footer {
 	background-color: $Very-dark-black-blue-footer-background;
 	color: white;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	text-align: center;
+	border-top-right-radius: 81px;
+
+	.logo h1 {
+		margin-top: 10px;
+	}
+
+	&__items {
+		margin-top: 10px;
+	}
+
+	ul {
+		padding: 0;
+		font-size: 0.9rem;
+		line-height: 1.8;
+	}
 
 	.footer-menu-1 li a,
 	.footer-menu-2 li a,
 	.footer-menu-3 li a {
 		color: $Grayish-blue-footer-text;
+	}
+
+	@media (min-width: 800px) {
+		height: 356px;
+
+		&__items {
+			display: flex;
+			justify-content: space-between;
+			width: 84%;
+		}
+
+		.footer-menu-1,
+		.footer-menu-2,
+		.footer-menu-3 {
+			text-align: left;
+		}
+
+		.footer-menu-1 p,
+		.footer-menu-2 p,
+		.footer-menu-3 p {
+			margin-bottom: 30px;
+		}
+
+		ul {
+			line-height: 2.4;
+		}
 	}
 }

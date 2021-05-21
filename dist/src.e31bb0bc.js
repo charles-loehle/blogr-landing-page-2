@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\images\\bg-pattern-intro.svg":[["bg-pattern-intro.48d6cfdf.svg","../images/bg-pattern-intro.svg"],"../images/bg-pattern-intro.svg"],"./..\\..\\images\\bg-pattern-circles.svg":[["bg-pattern-circles.745b0af0.svg","../images/bg-pattern-circles.svg"],"../images/bg-pattern-circles.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\..\\images\\bg-pattern-intro.svg":[["bg-pattern-intro.48d6cfdf.svg","../images/bg-pattern-intro.svg"],"../images/bg-pattern-intro.svg"],"./..\\..\\images\\illustration-editor-desktop.svg":[["illustration-editor-desktop.8e2d5d5c.svg","../images/illustration-editor-desktop.svg"],"../images/illustration-editor-desktop.svg"],"./..\\..\\images\\bg-pattern-circles.svg":[["bg-pattern-circles.745b0af0.svg","../images/bg-pattern-circles.svg"],"../images/bg-pattern-circles.svg"],"./..\\..\\images\\illustration-laptop-desktop.svg":[["illustration-laptop-desktop.30f0033a.svg","../images/illustration-laptop-desktop.svg"],"../images/illustration-laptop-desktop.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/style.scss");
@@ -223,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58105" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49675" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

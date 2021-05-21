@@ -1,5 +1,57 @@
 .section-2 {
 	background-image: url('../../images/bg-pattern-circles.svg');
+	background-repeat: no-repeat;
+	background-position: -202px -446px;
 	background-color: $Very-dark-gray-blue;
 	color: $White-text;
+	margin-top: 272px;
+	border-bottom-left-radius: 81px;
+	border-top-right-radius: 81px;
+	line-height: 1.8;
+	font-size: 1rem;
+
+	img {
+		position: relative;
+		top: -148px;
+	}
+
+	h2,
+	p {
+		position: relative;
+		top: -148px;
+	}
+
+	.section-2__phones {
+		text-align: center;
+	}
+
+	@media (min-width: 1024px) {
+		margin-top: 82px;
+		height: 408px;
+
+		h2,
+		p {
+			position: static;
+		}
+
+		&__phones.container {
+			text-align: left;
+			display: grid;
+			grid-template-columns: 1fr 505px;
+			grid-template-rows: 200px 202px;
+
+			h2 {
+				grid-column: 2/2;
+				margin-bottom: 0;
+			}
+			p {
+				grid-column: 2/2;
+				margin-top: 9px;
+			}
+		}
+
+		&__info {
+			padding-top: 75px;
+		}
+	}
 }
