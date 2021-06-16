@@ -7,6 +7,10 @@
 	z-index: 1;
 	margin-bottom: 68px;
 
+	&__toggle {
+		cursor: pointer;
+	}
+
 	// Hamburger Open Styles - turns it into an X
 	&.open {
 		.header__toggle {

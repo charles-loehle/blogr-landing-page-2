@@ -216,6 +216,9 @@ button,
   z-index: 1;
   margin-bottom: 68px;
 }
+.header__toggle {
+  cursor: pointer;
+}
 .header.open .header__toggle > span:first-child {
   transform: rotate(45deg);
 }
