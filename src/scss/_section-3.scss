@@ -55,4 +55,17 @@
 			padding-top: 75px;
 		}
 	}
+
+	@media (min-width: 1400px) {
+		background-position: -28% 6px;
+		margin-top: 250px;
+	}
+
+	@media (min-width: 1600px) {
+		background-position: -15% 6px;
+	}
+
+	@media (min-width: 1800px) {
+		background-position: -10% 6px;
+	}
 }

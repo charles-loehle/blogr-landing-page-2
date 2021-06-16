@@ -140,7 +140,7 @@ h3 {
 
 button,
 .btn {
-  padding: 0.775rem 1rem;
+  padding: 0.775rem 1rem 0.5rem;
   border-radius: 50px;
   border: 0;
   cursor: pointer;
@@ -448,6 +448,26 @@ button,
     grid-row: 4/5;
   }
 }
+@media (min-width: 1200px) {
+  .section-1 {
+    background-position: 155% 101px;
+  }
+}
+@media (min-width: 1400px) {
+  .section-1 {
+    background-position: 127% 101px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-1 {
+    background-position: 118% 101px;
+  }
+}
+@media (min-width: 1800px) {
+  .section-1 {
+    background-position: 113% 101px;
+  }
+}
 .section-1 .section-heading {
   grid-column: 2/4;
 }
@@ -553,6 +573,22 @@ button,
   }
   .section-3__info {
     padding-top: 75px;
+  }
+}
+@media (min-width: 1400px) {
+  .section-3 {
+    background-position: -28% 6px;
+    margin-top: 250px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-3 {
+    background-position: -15% 6px;
+  }
+}
+@media (min-width: 1800px) {
+  .section-3 {
+    background-position: -10% 6px;
   }
 }
 

@@ -46,6 +46,22 @@
 		}
 	}
 
+	@media (min-width: 1200px) {
+		background-position: 155% 101px;
+	}
+
+	@media (min-width: 1400px) {
+		background-position: 127% 101px;
+	}
+
+	@media (min-width: 1600px) {
+		background-position: 118% 101px;
+	}
+
+	@media (min-width: 1800px) {
+		background-position: 113% 101px;
+	}
+
 	.section-heading {
 		grid-column: 2/4;
 	}
